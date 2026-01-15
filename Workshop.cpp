@@ -1,9 +1,5 @@
 ﻿/*
  * Student Fees & Attendance Management System
- * I used fixed-size arrays (size 100) because vectors were giving me memory errors
- * that I couldn't fix in time. The console formatting for the receipt was also
- * very tedious to line up manually.
- *
  * Future Improvements:
  * - Make the arrays dynamic so they don't crash after 100 students.
  * - Add a real GUI instead of this console text.
@@ -491,7 +487,7 @@ void showAdminStats(sql::Connection* conn) {
         if (count == 0) cout << "   No revenue data available.\n";
         else {
             for (int i = 0; i < count; i++) {
-                // Formatting the bar chart was annoying. 
+                
                 int barLen = 0;
                 if (maxRev > 0) {
                     barLen = (int)((revenues[i] / maxRev) * 30.0);
@@ -943,8 +939,6 @@ void payFees(sql::Connection* conn, string studentUsername) {
 
         // Validation: Don't let them pay more than they owe
         if (payAmt > remaining) {
-            // drawError("Amount too high, adjusting to max."); 
-            // Actually just fix it automatically
             payAmt = remaining;
         }
 
@@ -1382,3 +1376,4 @@ int main() {
     return 0;
 
 }
+
