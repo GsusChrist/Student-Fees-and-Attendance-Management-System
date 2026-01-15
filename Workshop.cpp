@@ -42,7 +42,6 @@ void drawHeader(const string& title, int color = 11);
 void drawSuccess(const string& message);
 void drawError(const string& message);
 
-// Menu now takes a raw array and size instead of vector
 void drawMenuFrame(const string& title, string options[], int optionCount, int selected);
 void drawLoadingScreen(sql::Connection* conn);
 void printReceipt(string ref, string date, string sName, string fName, double amount);
@@ -1381,4 +1380,5 @@ int main() {
     }
     delete conn;
     return 0;
+
 }
