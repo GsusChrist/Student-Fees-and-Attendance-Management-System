@@ -1,12 +1,4 @@
-﻿/*
- * Student Fees & Attendance Management System
- * Future Improvements:
- * - Make the arrays dynamic so they don't crash after 100 students.
- * - Add a real GUI instead of this console text.
- * - Clean up the repeated code in the print functions.
- */
-
- // 1. SUPPRESSION MACROS
+//Student Fees & Attendance Management System
 #define _CRT_SECURE_NO_WARNINGS
 #define NOMINMAX
 
@@ -1376,4 +1368,5 @@ int main() {
     return 0;
 
 }
+
 
